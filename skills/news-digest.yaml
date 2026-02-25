@@ -1,0 +1,40 @@
+name: news-digest
+version: 1
+description: "Get a quick news summary on any topic"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/news"
+  keywords:
+    - "what's in the news"
+    - "news about"
+    - "latest news"
+    - "what's happening with"
+
+vars:
+  topic: "top news today"
+
+steps:
+  - tool: web_search
+    params:
+      query: "{{topic}} news today"
+      count: 8
+    store_as: results
+
+prompt: |
+  Create a brief news digest from the search results.
+
+  Search results:
+  {{results}}
+
+  Format as a quick-scan digest:
+  - 3-5 top stories, one paragraph each
+  - Lead with the most important/interesting story
+  - Include the source for each item
+  - Note if stories are developing or confirmed
+
+  Keep the whole digest under 300 words.
+  Stay neutral — report facts, not opinions.
+  If the topic is niche and results are thin, say so honestly.

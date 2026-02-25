@@ -1,0 +1,47 @@
+name: email-followup
+version: 1
+description: "Find emails you sent that never got a reply"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/followup"
+  keywords:
+    - "follow up"
+    - "who hasn't replied"
+    - "pending replies"
+    - "waiting for response"
+    - "unanswered emails"
+
+steps:
+  - tool: email_search
+    params:
+      query: "in:sent"
+      limit: 20
+    store_as: sent
+
+  - tool: email_check
+    params: {}
+    store_as: inbox
+
+prompt: |
+  Help the user identify emails they sent that haven't received a reply.
+
+  Recently sent emails:
+  {{sent}}
+
+  Current inbox:
+  {{inbox}}
+
+  Cross-reference sent emails against inbox replies. List emails where:
+  - The user sent something and got no response
+  - It's been more than a day
+  - The email seems to expect a reply (questions, requests, proposals)
+
+  For each, suggest:
+  - Who to follow up with
+  - A brief follow-up message they could send
+  - Whether it's worth following up or letting it go
+
+  Skip automated emails, newsletters, and things that don't need replies.

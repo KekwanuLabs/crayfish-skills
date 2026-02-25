@@ -1,0 +1,45 @@
+name: meeting-prep
+version: 1
+description: "Prepare for your next meeting with context from email and calendar"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/prep"
+  keywords:
+    - "prepare for my meeting"
+    - "meeting prep"
+    - "what's my next meeting"
+    - "brief me for my meeting"
+
+steps:
+  - tool: calendar_upcoming
+    params:
+      days: 1
+    store_as: upcoming
+
+  - tool: email_search
+    params:
+      query: "{{upcoming}}"
+      limit: 10
+    store_as: related_emails
+    on_error: skip
+
+prompt: |
+  Help the user prepare for their next meeting.
+
+  Upcoming calendar:
+  {{upcoming}}
+
+  Related emails:
+  {{related_emails}}
+
+  Format:
+  1. Next meeting — what, when, who
+  2. Context — relevant email threads with these people
+  3. Suggested talking points based on recent communication
+  4. Any action items you promised in email that relate to this meeting
+
+  If there are no upcoming meetings, just say so.
+  Keep it practical and under 250 words.

@@ -1,0 +1,56 @@
+name: standup-report
+version: 1
+description: "Generate a standup report from yesterday's activity"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  schedule: "0 9 * * 1-5"
+  command: "/standup"
+  keywords:
+    - "standup"
+    - "stand up"
+    - "what did I do yesterday"
+    - "daily update"
+
+steps:
+  - tool: email_summarize
+    params: {}
+    store_as: email_activity
+    on_error: skip
+
+  - tool: todo_list
+    params: {}
+    store_as: todos
+
+  - tool: calendar_today
+    params: {}
+    store_as: today_calendar
+    on_error: skip
+
+prompt: |
+  Generate a quick standup report for the user.
+
+  Recent email activity:
+  {{email_activity}}
+
+  Todo list:
+  {{todos}}
+
+  Today's calendar:
+  {{today_calendar}}
+
+  Format as a standard standup:
+
+  Yesterday:
+  - What was accomplished (infer from email activity and completed todos)
+
+  Today:
+  - What's planned (from calendar and pending todos)
+
+  Blockers:
+  - Anything that seems stuck (overdue todos, unanswered emails)
+
+  Keep each section to 2-4 bullet points. This should be copy-pasteable
+  into Slack or a standup tool.

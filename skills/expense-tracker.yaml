@@ -1,0 +1,39 @@
+name: expense-tracker
+version: 1
+description: "Find receipts and purchase confirmations in your email"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/expenses"
+  keywords:
+    - "check my expenses"
+    - "find my receipts"
+    - "what did I spend"
+    - "purchase history"
+    - "how much did I spend"
+
+steps:
+  - tool: email_search
+    params:
+      query: "receipt OR order confirmation OR purchase OR payment OR invoice"
+      limit: 20
+    store_as: receipts
+
+prompt: |
+  Search through the user's email for recent purchases, receipts,
+  and payment confirmations.
+
+  Email results:
+  {{receipts}}
+
+  Create a summary of recent spending:
+  - Date, vendor/store, amount
+  - Group by category if possible (food, subscriptions, shopping, etc.)
+  - Show a rough total
+
+  If amounts aren't clear from email subjects/snippets, note what
+  you found and suggest the user check specific emails for details.
+
+  Keep it factual — no judgment on spending habits.

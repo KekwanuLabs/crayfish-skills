@@ -1,0 +1,44 @@
+name: schedule-finder
+version: 1
+description: "Find free time in your calendar for a new meeting or task"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/free"
+  keywords:
+    - "when am I free"
+    - "find free time"
+    - "schedule a meeting"
+    - "when can I"
+    - "open slots"
+
+steps:
+  - tool: calendar_free
+    params:
+      days: 5
+    store_as: free_slots
+
+  - tool: calendar_upcoming
+    params:
+      days: 5
+    store_as: upcoming
+
+prompt: |
+  Help the user find free time in their schedule.
+
+  Free slots:
+  {{free_slots}}
+
+  Upcoming events:
+  {{upcoming}}
+
+  Present available time slots in a friendly way:
+  - Group by day
+  - Show duration of each free block
+  - Highlight the best slots for focused work (2+ hours) vs quick meetings (30-60 min)
+  - Account for lunch time (roughly noon-1pm) and reasonable working hours
+
+  If the user mentioned a specific need (like "schedule a 1-hour meeting"),
+  recommend the best 2-3 options.

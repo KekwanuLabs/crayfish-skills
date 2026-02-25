@@ -1,0 +1,43 @@
+name: email-autoresponder
+version: 1
+description: "Draft quick replies to emails that need a response"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/replies"
+  keywords:
+    - "draft my replies"
+    - "help me reply to emails"
+    - "answer my emails"
+    - "respond to my emails"
+
+steps:
+  - tool: email_check
+    params: {}
+    store_as: unread
+
+  - tool: email_summarize
+    params: {}
+    store_as: summary
+
+prompt: |
+  Review the user's unread emails and draft short replies for ones
+  that clearly need a response.
+
+  Unread emails:
+  {{unread}}
+
+  Summary:
+  {{summary}}
+
+  For each email that needs a reply:
+  - Show who it's from and the subject
+  - Draft a concise reply (2-4 sentences)
+  - Match the tone of the sender (formal to formal, casual to casual)
+
+  Skip emails that don't need a reply (newsletters, notifications, FYI).
+
+  Present each draft clearly so the user can approve, edit, or skip.
+  Don't send anything — just draft. The user decides what to send.

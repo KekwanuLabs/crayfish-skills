@@ -14,7 +14,7 @@
     },
     {
       "name": "email-triage",
-      "description": "Triage and prioritize unread emails",
+      "description": "Triage and prioritize unread emails by urgency",
       "long_description": "Categorizes your unread emails by urgency: urgent, important, FYI, or skip. Gives you a one-sentence action item for each.",
       "author": "KekwanuLabs",
       "version": 1,
@@ -37,7 +37,7 @@
     {
       "name": "weekly-review",
       "description": "Weekly review of emails, tasks, and activity",
-      "long_description": "Runs Friday evenings or on demand. Summarizes your week's email activity and todos, highlights loose ends, and suggests focus areas for next week.",
+      "long_description": "Runs Friday evenings or on demand. Summarizes your week, highlights loose ends, and suggests focus areas for next week.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
@@ -65,7 +65,139 @@
       "type": "workflow",
       "tags": ["memory", "notes", "productivity"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/quick-capture.yaml",
-      "requires": ["memory_store"]
+      "requires": ["memory_save"]
+    },
+    {
+      "name": "meeting-prep",
+      "description": "Prepare for your next meeting with context from email and calendar",
+      "long_description": "Pulls your upcoming calendar events and searches email for related threads. Gives you talking points and open action items before you walk in.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["calendar", "email", "meetings"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/meeting-prep.yaml",
+      "requires": ["calendar_upcoming", "email_search"]
+    },
+    {
+      "name": "email-autoresponder",
+      "description": "Draft quick replies to emails that need a response",
+      "long_description": "Reviews unread emails and drafts short replies for ones that clearly need a response. You approve each draft before anything gets sent.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["email", "productivity"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-autoresponder.yaml",
+      "requires": ["email_check", "email_summarize"]
+    },
+    {
+      "name": "daily-journal",
+      "description": "Evening journal prompt to reflect on your day",
+      "long_description": "Runs at 9 PM or on demand. Looks at what happened today and asks thoughtful questions to help you reflect. Saves your reflections to memory.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["wellness", "journaling", "daily"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/daily-journal.yaml",
+      "requires": ["email_summarize", "todo_list", "memory_search"]
+    },
+    {
+      "name": "expense-tracker",
+      "description": "Find receipts and purchase confirmations in your email",
+      "long_description": "Searches your email for receipts, order confirmations, and invoices. Summarizes recent spending grouped by category.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["email", "finance"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/expense-tracker.yaml",
+      "requires": ["email_search"]
+    },
+    {
+      "name": "reminder-set",
+      "description": "Set a reminder and get nudged when it's time",
+      "long_description": "Say 'remind me to...' and Crayfish saves it to memory and your todo list. Simple and natural.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["productivity", "reminders"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/reminder-set.yaml",
+      "requires": ["memory_save", "todo_add"]
+    },
+    {
+      "name": "day-planner",
+      "description": "Plan your day based on calendar, todos, and email",
+      "long_description": "Combines your calendar, todo list, and urgent emails into a realistic day plan. Accounts for meetings and suggests what to tackle between them.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["calendar", "productivity", "planning"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/day-planner.yaml",
+      "requires": ["calendar_today", "todo_list", "email_check"]
+    },
+    {
+      "name": "email-followup",
+      "description": "Find emails you sent that never got a reply",
+      "long_description": "Cross-references your sent emails against your inbox to find unanswered threads. Suggests who to follow up with and drafts a nudge.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["email", "productivity"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-followup.yaml",
+      "requires": ["email_search", "email_check"]
+    },
+    {
+      "name": "schedule-finder",
+      "description": "Find free time in your calendar for a new meeting or task",
+      "long_description": "Shows your available time slots for the next 5 days. Highlights best blocks for focused work vs quick meetings.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["calendar", "scheduling"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/schedule-finder.yaml",
+      "requires": ["calendar_free", "calendar_upcoming"]
+    },
+    {
+      "name": "news-digest",
+      "description": "Get a quick news summary on any topic",
+      "long_description": "Searches the web for the latest news on a topic and creates a 3-5 story digest with sources. Requires Brave Search API.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["search", "news"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/news-digest.yaml",
+      "requires": ["web_search"]
+    },
+    {
+      "name": "email-unsubscribe",
+      "description": "Find newsletters and subscriptions cluttering your inbox",
+      "long_description": "Scans your inbox for newsletters, notifications, and marketing emails. Helps you decide what to keep, unsubscribe from, or auto-archive.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["email", "cleanup"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-unsubscribe.yaml",
+      "requires": ["email_search"]
+    },
+    {
+      "name": "contact-recap",
+      "description": "Get a recap of all interactions with a specific person",
+      "long_description": "Searches your email and memory for everything related to a person. Shows who they are, recent conversations, and open threads.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["email", "contacts", "memory"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/contact-recap.yaml",
+      "requires": ["email_search", "memory_search"]
+    },
+    {
+      "name": "standup-report",
+      "description": "Generate a standup report from yesterday's activity",
+      "long_description": "Runs weekday mornings or on demand. Creates a copy-pasteable standup with yesterday's accomplishments, today's plan, and blockers.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["productivity", "work", "daily"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/standup-report.yaml",
+      "requires": ["email_summarize", "todo_list", "calendar_today"]
     }
   ]
 }

@@ -1,0 +1,48 @@
+name: contact-recap
+version: 1
+description: "Get a recap of all interactions with a specific person"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/whois"
+  keywords:
+    - "what do I know about"
+    - "recap with"
+    - "history with"
+    - "interactions with"
+
+vars:
+  person: ""
+
+steps:
+  - tool: email_search
+    params:
+      query: "from:{{person}} OR to:{{person}}"
+      limit: 15
+    store_as: emails
+
+  - tool: memory_search
+    params:
+      query: "{{person}}"
+      limit: 10
+    store_as: memories
+
+prompt: |
+  Give the user a recap of their relationship with this person.
+
+  Email history:
+  {{emails}}
+
+  Memories:
+  {{memories}}
+
+  Summarize:
+  1. Who this person is (based on email context — colleague, client, friend, etc.)
+  2. Recent communication — last few exchanges, what was discussed
+  3. Any open threads — things promised, pending decisions, unanswered questions
+  4. Anything saved in memory about this person
+
+  This is useful before reaching out to someone you haven't talked to in a while.
+  Keep it factual and concise.

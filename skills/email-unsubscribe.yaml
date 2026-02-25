@@ -1,0 +1,42 @@
+name: email-unsubscribe
+version: 1
+description: "Find newsletters and subscriptions cluttering your inbox"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/cleanup"
+  keywords:
+    - "clean up my inbox"
+    - "unsubscribe"
+    - "too many newsletters"
+    - "inbox cleanup"
+    - "spam cleanup"
+
+steps:
+  - tool: email_search
+    params:
+      query: "unsubscribe OR newsletter OR weekly digest OR notification settings"
+      limit: 30
+    store_as: subscriptions
+
+prompt: |
+  Help the user identify newsletters and subscriptions cluttering their inbox.
+
+  Subscription-like emails found:
+  {{subscriptions}}
+
+  Group what you find:
+  1. Newsletters they seem to read (based on frequency, known senders)
+  2. Automated notifications (social media, apps, services)
+  3. Marketing/promotional emails
+
+  For each group, suggest:
+  - Which to keep
+  - Which to unsubscribe from
+  - Which to archive automatically with a label
+
+  Be practical — don't suggest unsubscribing from everything.
+  Some newsletters are actually useful. Focus on the noise.
+  Ask the user which ones they want to handle before taking any action.

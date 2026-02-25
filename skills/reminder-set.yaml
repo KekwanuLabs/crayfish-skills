@@ -1,0 +1,43 @@
+name: reminder-set
+version: 1
+description: "Set a reminder and get nudged when it's time"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/remind"
+  keywords:
+    - "remind me"
+    - "set a reminder"
+    - "don't let me forget"
+    - "nudge me"
+
+vars:
+  what: ""
+  when: ""
+
+steps:
+  - tool: memory_save
+    params:
+      key: "reminder"
+      content: "Reminder: {{what}} — Due: {{when}}"
+      category: "context"
+    store_as: saved
+
+  - tool: todo_add
+    params:
+      text: "{{what}}"
+    store_as: todo
+    on_error: skip
+
+prompt: |
+  The user wants to set a reminder.
+
+  Saved: {{saved}}
+  Todo: {{todo}}
+
+  Confirm what you set up in one natural sentence.
+  If the user gave a specific time, mention it.
+  If they were vague about timing ("later", "soon"), ask when exactly
+  they'd like to be reminded.

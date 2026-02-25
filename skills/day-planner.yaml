@@ -1,0 +1,51 @@
+name: day-planner
+version: 1
+description: "Plan your day based on calendar, todos, and email"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/plan"
+  keywords:
+    - "plan my day"
+    - "what should I do today"
+    - "help me plan"
+    - "organize my day"
+
+steps:
+  - tool: calendar_today
+    params: {}
+    store_as: calendar
+
+  - tool: todo_list
+    params: {}
+    store_as: todos
+
+  - tool: email_check
+    params: {}
+    store_as: emails
+    on_error: skip
+
+prompt: |
+  Help the user plan their day based on what's actually on their plate.
+
+  Today's calendar:
+  {{calendar}}
+
+  Todo list:
+  {{todos}}
+
+  Unread emails:
+  {{emails}}
+
+  Create a simple day plan:
+  1. Fixed commitments — meetings and events from calendar
+  2. Must-do — urgent emails to reply to + top priority todos
+  3. Should-do — important but not urgent items
+  4. If time allows — lower priority items
+
+  Account for meetings when suggesting when to do tasks.
+  Keep it realistic — don't overload. If the day is packed with meetings,
+  say so and suggest only 1-2 things to squeeze in between.
+  Under 200 words.

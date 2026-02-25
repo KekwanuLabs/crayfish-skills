@@ -1,0 +1,54 @@
+name: daily-journal
+version: 1
+description: "Evening journal prompt to reflect on your day"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  schedule: "0 21 * * *"
+  command: "/journal"
+  keywords:
+    - "journal"
+    - "reflect on my day"
+    - "how was my day"
+    - "daily reflection"
+
+steps:
+  - tool: email_summarize
+    params: {}
+    store_as: email_activity
+    on_error: skip
+
+  - tool: todo_list
+    params: {}
+    store_as: todos
+    on_error: skip
+
+  - tool: memory_search
+    params:
+      query: "today"
+      limit: 5
+    store_as: recent_memories
+    on_error: skip
+
+prompt: |
+  It's the end of the day. Help the user reflect with a gentle journal prompt.
+
+  Today's email activity:
+  {{email_activity}}
+
+  Current todos:
+  {{todos}}
+
+  Recent notes:
+  {{recent_memories}}
+
+  Ask the user 2-3 thoughtful questions based on what actually happened today.
+  Examples:
+  - "You exchanged a few emails with [person] today — how did that go?"
+  - "You had [task] on your list — did you get to it?"
+  - "What's one thing you're glad you did today?"
+
+  Keep it warm and brief. This should feel like a friend asking, not a form.
+  After they respond, save key reflections to memory for future reference.
