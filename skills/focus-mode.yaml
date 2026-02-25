@@ -1,0 +1,26 @@
+name: focus-mode
+version: 1
+description: "Minimize interruptions and batch notifications for deep work"
+author: "KekwanuLabs"
+type: prompt
+min_tier: trusted
+
+trigger:
+  command: "/focus"
+  keywords:
+    - "focus mode"
+    - "do not disturb"
+    - "i need to concentrate"
+    - "deep work"
+
+prompt: |
+  The user has activated focus mode. Adjust your behavior:
+
+  - Do NOT proactively notify about new emails or calendar events
+  - Keep responses extremely brief — one or two sentences max
+  - Only interrupt for truly urgent items (emails marked urgent from known contacts)
+  - If the user asks a question, answer it directly without extra context
+  - Batch any non-urgent updates for when focus mode ends
+
+  When the user says "end focus mode" or "I'm done focusing",
+  provide a brief summary of anything that came in while they were focused.

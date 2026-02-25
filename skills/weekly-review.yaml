@@ -1,0 +1,42 @@
+name: weekly-review
+version: 1
+description: "Weekly review of emails, tasks, and activity"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  schedule: "0 18 * * 5"
+  command: "/review"
+  keywords:
+    - "weekly review"
+    - "week in review"
+    - "how was my week"
+    - "recap the week"
+
+steps:
+  - tool: email_summarize
+    params: {}
+    store_as: email_summary
+
+  - tool: todo_list
+    params: {}
+    store_as: todos
+
+prompt: |
+  Create a weekly review for the user. It's Friday evening — help them
+  close out the week and set up for next week.
+
+  Email activity this week:
+  {{email_summary}}
+
+  Current todos:
+  {{todos}}
+
+  Format:
+  1. This week's highlights — what got done, important emails handled
+  2. Loose ends — anything that still needs attention
+  3. Suggested focus for next week — based on what's pending
+
+  Keep it conversational and under 300 words. Be honest about
+  what's piling up but frame it constructively.

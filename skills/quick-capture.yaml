@@ -1,0 +1,35 @@
+name: quick-capture
+version: 1
+description: "Save a thought, idea, or note to memory quickly"
+author: "KekwanuLabs"
+type: workflow
+min_tier: trusted
+
+trigger:
+  command: "/note"
+  keywords:
+    - "remember this"
+    - "save this"
+    - "note to self"
+    - "don't let me forget"
+    - "jot this down"
+
+vars:
+  content: ""
+
+steps:
+  - tool: memory_store
+    params:
+      key: "note"
+      content: "{{content}}"
+      category: "context"
+    store_as: result
+
+prompt: |
+  The user asked you to save a note or remember something.
+
+  Result: {{result}}
+
+  Confirm what you saved in one sentence. Don't repeat the entire note back —
+  just acknowledge it naturally, like "Got it, I'll remember that."
+  If the note seems like a task or deadline, mention you'll keep track of it.

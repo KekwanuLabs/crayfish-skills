@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "name": "morning-briefing",
+      "description": "Daily morning briefing with email summary and tasks",
+      "long_description": "Runs every morning at 7 AM or on demand. Checks your unread emails and todo list, then creates a concise briefing to start your day.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["email", "productivity", "daily"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/morning-briefing.yaml",
+      "requires": ["email_check", "todo_list"]
+    },
+    {
+      "name": "email-triage",
+      "description": "Triage and prioritize unread emails",
+      "long_description": "Categorizes your unread emails by urgency: urgent, important, FYI, or skip. Gives you a one-sentence action item for each.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["email", "productivity"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-triage.yaml",
+      "requires": ["email_check", "email_summarize"]
+    },
+    {
+      "name": "smart-search",
+      "description": "Search the web and synthesize a clear answer",
+      "long_description": "Searches the web for your question and synthesizes the results into a clear, sourced answer. Requires Brave Search API.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["search", "research"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/smart-search.yaml",
+      "requires": ["web_search"]
+    },
+    {
+      "name": "weekly-review",
+      "description": "Weekly review of emails, tasks, and activity",
+      "long_description": "Runs Friday evenings or on demand. Summarizes your week's email activity and todos, highlights loose ends, and suggests focus areas for next week.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["email", "productivity", "weekly"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/weekly-review.yaml",
+      "requires": ["email_summarize", "todo_list"]
+    },
+    {
+      "name": "focus-mode",
+      "description": "Minimize interruptions and batch notifications for deep work",
+      "long_description": "Tells Crayfish to stop proactive notifications and keep responses ultra-brief. When you end focus mode, you get a summary of what you missed.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "prompt",
+      "tags": ["productivity", "focus"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/focus-mode.yaml",
+      "requires": []
+    },
+    {
+      "name": "quick-capture",
+      "description": "Save a thought, idea, or note to memory quickly",
+      "long_description": "Say 'remember this' or 'note to self' and Crayfish saves it to memory. Quick and natural — no forms, no apps.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "tags": ["memory", "notes", "productivity"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/quick-capture.yaml",
+      "requires": ["memory_store"]
+    }
+  ]
+}
