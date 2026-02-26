@@ -8,6 +8,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["email", "productivity", "daily"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/morning-briefing.yaml",
       "requires": ["email_check", "todo_list"]
@@ -19,6 +20,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "communication",
       "tags": ["email", "productivity"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-triage.yaml",
       "requires": ["email_check", "email_summarize"]
@@ -30,6 +32,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["search", "research"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/smart-search.yaml",
       "requires": ["web_search"]
@@ -41,6 +44,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["email", "productivity", "weekly"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/weekly-review.yaml",
       "requires": ["email_summarize", "todo_list"]
@@ -52,6 +56,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "prompt",
+      "category": "productivity",
       "tags": ["productivity", "focus"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/focus-mode.yaml",
       "requires": []
@@ -63,6 +68,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["memory", "notes", "productivity"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/quick-capture.yaml",
       "requires": ["memory_save"]
@@ -74,6 +80,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["calendar", "email", "meetings"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/meeting-prep.yaml",
       "requires": ["calendar_upcoming", "email_search"]
@@ -85,6 +92,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "communication",
       "tags": ["email", "productivity"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-autoresponder.yaml",
       "requires": ["email_check", "email_summarize"]
@@ -96,6 +104,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "wellness",
       "tags": ["wellness", "journaling", "daily"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/daily-journal.yaml",
       "requires": ["email_summarize", "todo_list", "memory_search"]
@@ -107,6 +116,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "finance",
       "tags": ["email", "finance"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/expense-tracker.yaml",
       "requires": ["email_search"]
@@ -118,6 +128,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["productivity", "reminders"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/reminder-set.yaml",
       "requires": ["memory_save", "todo_add"]
@@ -129,6 +140,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["calendar", "productivity", "planning"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/day-planner.yaml",
       "requires": ["calendar_today", "todo_list", "email_check"]
@@ -140,6 +152,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "communication",
       "tags": ["email", "productivity"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-followup.yaml",
       "requires": ["email_search", "email_check"]
@@ -151,6 +164,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["calendar", "scheduling"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/schedule-finder.yaml",
       "requires": ["calendar_free", "calendar_upcoming"]
@@ -162,6 +176,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["search", "news"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/news-digest.yaml",
       "requires": ["web_search"]
@@ -173,6 +188,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "communication",
       "tags": ["email", "cleanup"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-unsubscribe.yaml",
       "requires": ["email_search"]
@@ -184,6 +200,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "communication",
       "tags": ["email", "contacts", "memory"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/contact-recap.yaml",
       "requires": ["email_search", "memory_search"]
@@ -195,6 +212,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["productivity", "work", "daily"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/standup-report.yaml",
       "requires": ["email_summarize", "todo_list", "calendar_today"]
@@ -206,6 +224,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "family",
       "tags": ["family", "daily", "calendar", "email"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family-briefing.yaml",
       "requires": ["calendar_today", "calendar_upcoming", "todo_list", "email_check", "memory_search"]
@@ -217,6 +236,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "prompt",
+      "category": "family",
       "tags": ["family", "context"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family-context.yaml",
       "requires": ["memory_search"]
@@ -228,6 +248,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "family",
       "tags": ["family", "onboarding"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family-setup.yaml",
       "requires": ["memory_search", "memory_save"]
@@ -239,6 +260,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["family", "weekly", "calendar", "planning"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/weekly-planner.yaml",
       "requires": ["calendar_upcoming", "todo_list", "memory_search"]
@@ -250,6 +272,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "productivity",
       "tags": ["family", "daily", "calendar"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/bedtime-routine.yaml",
       "requires": ["calendar_upcoming", "todo_list", "memory_search"]
@@ -261,6 +284,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "family",
       "tags": ["family", "meals", "planning"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/meal-planner.yaml",
       "requires": ["memory_search", "calendar_upcoming", "web_search"]
@@ -272,6 +296,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "family",
       "tags": ["family", "email", "school"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/school-emails.yaml",
       "requires": ["email_search", "memory_search"]
@@ -283,9 +308,46 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "faith",
       "tags": ["family", "faith", "calendar"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/church-schedule.yaml",
       "requires": ["memory_search", "calendar_search"]
+    },
+    {
+      "name": "shabbat-planner",
+      "description": "Shabbat preparation — candle lighting, dinner menu, and Friday timeline",
+      "long_description": "Helps Jewish families prepare for Shabbat with candle lighting times, dinner menu suggestions, a Friday prep timeline, and havdalah. Respects different levels of observance and learns family customs.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "category": "faith",
+      "tags": ["faith", "family", "shabbat", "jewish"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/faith/shabbat-planner.yaml",
+      "requires": ["memory_search", "web_search", "calendar_upcoming"]
+    },
+    {
+      "name": "prayer-times",
+      "description": "Islamic daily prayer times — salah schedule, conflicts, and Ramadan notes",
+      "long_description": "Shows today's five daily prayer times (Fajr, Dhuhr, Asr, Maghrib, Isha), flags calendar conflicts, and includes Ramadan suhoor/iftar times when relevant. Supports multiple calculation methods.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "category": "faith",
+      "tags": ["faith", "prayer", "islamic", "salah"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/faith/prayer-times.yaml",
+      "requires": ["memory_search", "web_search", "calendar_search"]
+    },
+    {
+      "name": "devotional",
+      "description": "Daily spiritual reflection — reading, intention, and gratitude for any faith",
+      "long_description": "A gentle morning devotional with a daily reading, brief reflection, intention for the day, and gratitude moment. Adapts to any faith tradition or works as a non-denominational reflection.",
+      "author": "KekwanuLabs",
+      "version": 1,
+      "type": "workflow",
+      "category": "faith",
+      "tags": ["faith", "devotional", "spiritual", "daily"],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/faith/devotional.yaml",
+      "requires": ["memory_search", "web_search", "todo_list"]
     },
     {
       "name": "trip-research",
@@ -294,6 +356,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "travel",
       "tags": ["family", "travel", "planning"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/trip-research.yaml",
       "requires": ["memory_search", "web_search"]
@@ -305,6 +368,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "travel",
       "tags": ["family", "travel", "planning"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/trip-itinerary.yaml",
       "requires": ["memory_search", "web_search", "calendar_search"]
@@ -316,6 +380,7 @@
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
+      "category": "travel",
       "tags": ["family", "travel", "planning"],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/trip-prep.yaml",
       "requires": ["memory_search", "calendar_search", "todo_list"]
