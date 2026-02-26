@@ -9,9 +9,16 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["email", "productivity", "daily"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/morning-briefing.yaml",
-      "requires": ["email_check", "todo_list"]
+      "tags": [
+        "email",
+        "productivity",
+        "daily"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/morning-briefing.yaml",
+      "requires": [
+        "email_check",
+        "todo_list"
+      ]
     },
     {
       "name": "email-triage",
@@ -21,9 +28,15 @@
       "version": 1,
       "type": "workflow",
       "category": "communication",
-      "tags": ["email", "productivity"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-triage.yaml",
-      "requires": ["email_check", "email_summarize"]
+      "tags": [
+        "email",
+        "productivity"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/communication/email-triage.yaml",
+      "requires": [
+        "email_check",
+        "email_summarize"
+      ]
     },
     {
       "name": "smart-search",
@@ -33,9 +46,14 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["search", "research"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/smart-search.yaml",
-      "requires": ["web_search"]
+      "tags": [
+        "search",
+        "research"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/smart-search.yaml",
+      "requires": [
+        "web_search"
+      ]
     },
     {
       "name": "weekly-review",
@@ -45,9 +63,16 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["email", "productivity", "weekly"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/weekly-review.yaml",
-      "requires": ["email_summarize", "todo_list"]
+      "tags": [
+        "email",
+        "productivity",
+        "weekly"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/weekly-review.yaml",
+      "requires": [
+        "email_summarize",
+        "todo_list"
+      ]
     },
     {
       "name": "focus-mode",
@@ -57,21 +82,30 @@
       "version": 1,
       "type": "prompt",
       "category": "productivity",
-      "tags": ["productivity", "focus"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/focus-mode.yaml",
+      "tags": [
+        "productivity",
+        "focus"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/focus-mode.yaml",
       "requires": []
     },
     {
       "name": "quick-capture",
       "description": "Save a thought, idea, or note to memory quickly",
-      "long_description": "Say 'remember this' or 'note to self' and Crayfish saves it to memory. Quick and natural — no forms, no apps.",
+      "long_description": "Say 'remember this' or 'note to self' and Crayfish saves it to memory. Quick and natural \u2014 no forms, no apps.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["memory", "notes", "productivity"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/quick-capture.yaml",
-      "requires": ["memory_save"]
+      "tags": [
+        "memory",
+        "notes",
+        "productivity"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/quick-capture.yaml",
+      "requires": [
+        "memory_save"
+      ]
     },
     {
       "name": "meeting-prep",
@@ -81,9 +115,16 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["calendar", "email", "meetings"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/meeting-prep.yaml",
-      "requires": ["calendar_upcoming", "email_search"]
+      "tags": [
+        "calendar",
+        "email",
+        "meetings"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/meeting-prep.yaml",
+      "requires": [
+        "calendar_upcoming",
+        "email_search"
+      ]
     },
     {
       "name": "email-autoresponder",
@@ -93,9 +134,15 @@
       "version": 1,
       "type": "workflow",
       "category": "communication",
-      "tags": ["email", "productivity"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-autoresponder.yaml",
-      "requires": ["email_check", "email_summarize"]
+      "tags": [
+        "email",
+        "productivity"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/communication/email-autoresponder.yaml",
+      "requires": [
+        "email_check",
+        "email_summarize"
+      ]
     },
     {
       "name": "daily-journal",
@@ -105,9 +152,17 @@
       "version": 1,
       "type": "workflow",
       "category": "wellness",
-      "tags": ["wellness", "journaling", "daily"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/daily-journal.yaml",
-      "requires": ["email_summarize", "todo_list", "memory_search"]
+      "tags": [
+        "wellness",
+        "journaling",
+        "daily"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/wellness/daily-journal.yaml",
+      "requires": [
+        "email_summarize",
+        "todo_list",
+        "memory_search"
+      ]
     },
     {
       "name": "expense-tracker",
@@ -117,9 +172,14 @@
       "version": 1,
       "type": "workflow",
       "category": "finance",
-      "tags": ["email", "finance"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/expense-tracker.yaml",
-      "requires": ["email_search"]
+      "tags": [
+        "email",
+        "finance"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/finance/expense-tracker.yaml",
+      "requires": [
+        "email_search"
+      ]
     },
     {
       "name": "reminder-set",
@@ -129,9 +189,15 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["productivity", "reminders"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/reminder-set.yaml",
-      "requires": ["memory_save", "todo_add"]
+      "tags": [
+        "productivity",
+        "reminders"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/reminder-set.yaml",
+      "requires": [
+        "memory_save",
+        "todo_add"
+      ]
     },
     {
       "name": "day-planner",
@@ -141,9 +207,17 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["calendar", "productivity", "planning"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/day-planner.yaml",
-      "requires": ["calendar_today", "todo_list", "email_check"]
+      "tags": [
+        "calendar",
+        "productivity",
+        "planning"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/day-planner.yaml",
+      "requires": [
+        "calendar_today",
+        "todo_list",
+        "email_check"
+      ]
     },
     {
       "name": "email-followup",
@@ -153,9 +227,15 @@
       "version": 1,
       "type": "workflow",
       "category": "communication",
-      "tags": ["email", "productivity"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-followup.yaml",
-      "requires": ["email_search", "email_check"]
+      "tags": [
+        "email",
+        "productivity"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/communication/email-followup.yaml",
+      "requires": [
+        "email_search",
+        "email_check"
+      ]
     },
     {
       "name": "schedule-finder",
@@ -165,9 +245,15 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["calendar", "scheduling"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/schedule-finder.yaml",
-      "requires": ["calendar_free", "calendar_upcoming"]
+      "tags": [
+        "calendar",
+        "scheduling"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/schedule-finder.yaml",
+      "requires": [
+        "calendar_free",
+        "calendar_upcoming"
+      ]
     },
     {
       "name": "news-digest",
@@ -177,9 +263,14 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["search", "news"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/news-digest.yaml",
-      "requires": ["web_search"]
+      "tags": [
+        "search",
+        "news"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/news-digest.yaml",
+      "requires": [
+        "web_search"
+      ]
     },
     {
       "name": "email-unsubscribe",
@@ -189,9 +280,14 @@
       "version": 1,
       "type": "workflow",
       "category": "communication",
-      "tags": ["email", "cleanup"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/email-unsubscribe.yaml",
-      "requires": ["email_search"]
+      "tags": [
+        "email",
+        "cleanup"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/communication/email-unsubscribe.yaml",
+      "requires": [
+        "email_search"
+      ]
     },
     {
       "name": "contact-recap",
@@ -201,9 +297,16 @@
       "version": 1,
       "type": "workflow",
       "category": "communication",
-      "tags": ["email", "contacts", "memory"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/contact-recap.yaml",
-      "requires": ["email_search", "memory_search"]
+      "tags": [
+        "email",
+        "contacts",
+        "memory"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/communication/contact-recap.yaml",
+      "requires": [
+        "email_search",
+        "memory_search"
+      ]
     },
     {
       "name": "standup-report",
@@ -213,177 +316,296 @@
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["productivity", "work", "daily"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/standup-report.yaml",
-      "requires": ["email_summarize", "todo_list", "calendar_today"]
+      "tags": [
+        "productivity",
+        "work",
+        "daily"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/standup-report.yaml",
+      "requires": [
+        "email_summarize",
+        "todo_list",
+        "calendar_today"
+      ]
     },
     {
       "name": "family-briefing",
-      "description": "Morning family briefing — today's schedule, action items, and heads-up",
+      "description": "Morning family briefing \u2014 today's schedule, action items, and heads-up",
       "long_description": "Runs every morning at 6 AM or on demand. Pulls calendar, todos, and emails to create a warm, scannable family briefing with today's schedule, upcoming heads-ups, and action items.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "family",
-      "tags": ["family", "daily", "calendar", "email"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family-briefing.yaml",
-      "requires": ["calendar_today", "calendar_upcoming", "todo_list", "email_check", "memory_search"]
+      "tags": [
+        "family",
+        "daily",
+        "calendar",
+        "email"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family/family-briefing.yaml",
+      "requires": [
+        "calendar_today",
+        "calendar_upcoming",
+        "todo_list",
+        "email_check",
+        "memory_search"
+      ]
     },
     {
       "name": "family-context",
-      "description": "Always-on family awareness — makes every conversation family-smart",
+      "description": "Always-on family awareness \u2014 makes every conversation family-smart",
       "long_description": "A prompt skill that makes Crayfish think like a trusted family friend. Automatically considers schedules, dietary needs, kid logistics, and budget when planning anything.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "prompt",
       "category": "family",
-      "tags": ["family", "context"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family-context.yaml",
-      "requires": ["memory_search"]
+      "tags": [
+        "family",
+        "context"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family/family-context.yaml",
+      "requires": [
+        "memory_search"
+      ]
     },
     {
       "name": "family-setup",
-      "description": "Guided family onboarding — get to know the family through conversation",
+      "description": "Guided family onboarding \u2014 get to know the family through conversation",
       "long_description": "A warm, conversational onboarding flow that learns about your family members, schedules, dietary needs, routines, and preferences. Saves everything to memory for other family skills.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "family",
-      "tags": ["family", "onboarding"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family-setup.yaml",
-      "requires": ["memory_search", "memory_save"]
+      "tags": [
+        "family",
+        "onboarding"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family/family-setup.yaml",
+      "requires": [
+        "memory_search",
+        "memory_save"
+      ]
     },
     {
       "name": "weekly-planner",
-      "description": "Sunday evening weekly overview — the week at a glance with prep notes",
+      "description": "Sunday evening weekly overview \u2014 the week at a glance with prep notes",
       "long_description": "Runs Sunday at 8 PM or on demand. Creates a whiteboard-style weekly overview with day-by-day events, busy day flags, quiet windows for errands, and prep reminders.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["family", "weekly", "calendar", "planning"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/weekly-planner.yaml",
-      "requires": ["calendar_upcoming", "todo_list", "memory_search"]
+      "tags": [
+        "family",
+        "weekly",
+        "calendar",
+        "planning"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/weekly-planner.yaml",
+      "requires": [
+        "calendar_upcoming",
+        "todo_list",
+        "memory_search"
+      ]
     },
     {
       "name": "bedtime-routine",
-      "description": "Tomorrow preview — quick prep list and tomorrow at a glance for bedtime",
+      "description": "Tomorrow preview \u2014 quick prep list and tomorrow at a glance for bedtime",
       "long_description": "Runs Sun-Thu at 9 PM or on demand. A quick bedtime preview with tonight's prep tasks and tomorrow's schedule at a glance. Designed to take 15 seconds to read.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "productivity",
-      "tags": ["family", "daily", "calendar"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/bedtime-routine.yaml",
-      "requires": ["calendar_upcoming", "todo_list", "memory_search"]
+      "tags": [
+        "family",
+        "daily",
+        "calendar"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/productivity/bedtime-routine.yaml",
+      "requires": [
+        "calendar_upcoming",
+        "todo_list",
+        "memory_search"
+      ]
     },
     {
       "name": "meal-planner",
-      "description": "Weekly meal planning with grocery list — family-friendly, schedule-aware",
+      "description": "Weekly meal planning with grocery list \u2014 family-friendly, schedule-aware",
       "long_description": "Creates a weekly meal plan matched to your family's busyness level each day. Includes weeknight dinners, weekend meals, a batch cook tip, and a grocery list organized by store section.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "family",
-      "tags": ["family", "meals", "planning"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/meal-planner.yaml",
-      "requires": ["memory_search", "calendar_upcoming", "web_search"]
+      "tags": [
+        "family",
+        "meals",
+        "planning"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family/meal-planner.yaml",
+      "requires": [
+        "memory_search",
+        "calendar_upcoming",
+        "web_search"
+      ]
     },
     {
       "name": "school-emails",
-      "description": "School communication filter — surfaces action items from school emails",
+      "description": "School communication filter \u2014 surfaces action items from school emails",
       "long_description": "Searches your email for school-related messages and organizes them into action required, upcoming events, and FYI categories. Uses your kids' names from memory.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "family",
-      "tags": ["family", "email", "school"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/school-emails.yaml",
-      "requires": ["email_search", "memory_search"]
+      "tags": [
+        "family",
+        "email",
+        "school"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/family/school-emails.yaml",
+      "requires": [
+        "email_search",
+        "memory_search"
+      ]
     },
     {
       "name": "church-schedule",
-      "description": "Church and faith community schedule — services, groups, and events",
+      "description": "Church and faith community schedule \u2014 services, groups, and events",
       "long_description": "Shows your church or faith community schedule including services, groups, volunteering commitments, and upcoming events. If no church info is saved, guides you through setup.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "faith",
-      "tags": ["family", "faith", "calendar"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/church-schedule.yaml",
-      "requires": ["memory_search", "calendar_search"]
+      "tags": [
+        "family",
+        "faith",
+        "calendar"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/faith/church-schedule.yaml",
+      "requires": [
+        "memory_search",
+        "calendar_search"
+      ]
     },
     {
       "name": "shabbat-planner",
-      "description": "Shabbat preparation — candle lighting, dinner menu, and Friday timeline",
+      "description": "Shabbat preparation \u2014 candle lighting, dinner menu, and Friday timeline",
       "long_description": "Helps Jewish families prepare for Shabbat with candle lighting times, dinner menu suggestions, a Friday prep timeline, and havdalah. Respects different levels of observance and learns family customs.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "faith",
-      "tags": ["faith", "family", "shabbat", "jewish"],
+      "tags": [
+        "faith",
+        "family",
+        "shabbat",
+        "jewish"
+      ],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/faith/shabbat-planner.yaml",
-      "requires": ["memory_search", "web_search", "calendar_upcoming"]
+      "requires": [
+        "memory_search",
+        "web_search",
+        "calendar_upcoming"
+      ]
     },
     {
       "name": "prayer-times",
-      "description": "Islamic daily prayer times — salah schedule, conflicts, and Ramadan notes",
+      "description": "Islamic daily prayer times \u2014 salah schedule, conflicts, and Ramadan notes",
       "long_description": "Shows today's five daily prayer times (Fajr, Dhuhr, Asr, Maghrib, Isha), flags calendar conflicts, and includes Ramadan suhoor/iftar times when relevant. Supports multiple calculation methods.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "faith",
-      "tags": ["faith", "prayer", "islamic", "salah"],
+      "tags": [
+        "faith",
+        "prayer",
+        "islamic",
+        "salah"
+      ],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/faith/prayer-times.yaml",
-      "requires": ["memory_search", "web_search", "calendar_search"]
+      "requires": [
+        "memory_search",
+        "web_search",
+        "calendar_search"
+      ]
     },
     {
       "name": "devotional",
-      "description": "Daily spiritual reflection — reading, intention, and gratitude for any faith",
+      "description": "Daily spiritual reflection \u2014 reading, intention, and gratitude for any faith",
       "long_description": "A gentle morning devotional with a daily reading, brief reflection, intention for the day, and gratitude moment. Adapts to any faith tradition or works as a non-denominational reflection.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "faith",
-      "tags": ["faith", "devotional", "spiritual", "daily"],
+      "tags": [
+        "faith",
+        "devotional",
+        "spiritual",
+        "daily"
+      ],
       "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/faith/devotional.yaml",
-      "requires": ["memory_search", "web_search", "todo_list"]
+      "requires": [
+        "memory_search",
+        "web_search",
+        "todo_list"
+      ]
     },
     {
       "name": "trip-research",
-      "description": "Family trip research — destination overview, hotels, flights, and budget",
+      "description": "Family trip research \u2014 destination overview, hotels, flights, and budget",
       "long_description": "Comprehensive trip research for families. Searches for activities, hotels, and flights, then creates a trip brief with destination overview, where to stay, what to do, and budget estimates.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "travel",
-      "tags": ["family", "travel", "planning"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/trip-research.yaml",
-      "requires": ["memory_search", "web_search"]
+      "tags": [
+        "family",
+        "travel",
+        "planning"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/travel/trip-research.yaml",
+      "requires": [
+        "memory_search",
+        "web_search"
+      ]
     },
     {
       "name": "trip-itinerary",
-      "description": "Day-by-day trip itinerary — relaxed family-paced planning with downtime",
+      "description": "Day-by-day trip itinerary \u2014 relaxed family-paced planning with downtime",
       "long_description": "Creates a relaxed day-by-day itinerary with one major activity per half-day, meal suggestions, and rainy day backups. Designed for families who need breathing room, not a packed tourist schedule.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "travel",
-      "tags": ["family", "travel", "planning"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/trip-itinerary.yaml",
-      "requires": ["memory_search", "web_search", "calendar_search"]
+      "tags": [
+        "family",
+        "travel",
+        "planning"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/travel/trip-itinerary.yaml",
+      "requires": [
+        "memory_search",
+        "web_search",
+        "calendar_search"
+      ]
     },
     {
       "name": "trip-prep",
-      "description": "Trip preparation — packing lists, timelines, and logistics checklists",
+      "description": "Trip preparation \u2014 packing lists, timelines, and logistics checklists",
       "long_description": "Creates a timeline checklist (2 weeks to day-of), personalized packing lists by family member, documents checklist, and a don't-forget list. Can save everything as a checkable packing todo list.",
       "author": "KekwanuLabs",
       "version": 1,
       "type": "workflow",
       "category": "travel",
-      "tags": ["family", "travel", "planning"],
-      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/trip-prep.yaml",
-      "requires": ["memory_search", "calendar_search", "todo_list"]
+      "tags": [
+        "family",
+        "travel",
+        "planning"
+      ],
+      "url": "https://raw.githubusercontent.com/KekwanuLabs/crayfish-skills/main/skills/travel/trip-prep.yaml",
+      "requires": [
+        "memory_search",
+        "calendar_search",
+        "todo_list"
+      ]
     }
   ]
 }
